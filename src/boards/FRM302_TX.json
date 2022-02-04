@@ -1,0 +1,39 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m0",
+    "extra_flags": "-DSTM32F030X8",
+    "f_cpu": "48000000L",
+	"ldscript": "ldscript.ld",
+    "mcu": "stm32f030c8t6",
+    "product_line": "STM32F030X8",
+	"variants_dir": "variants",
+    "variant": "FRM302_TX"
+  },
+  "connectivity": [
+    "can"
+  ],
+  "debug": {
+    "jlink_device": "STM32F030C8T6",
+    "openocd_target": "stm32f0x",
+    "svd_path": "STM32F30x.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "stm32cube",
+    "libopencm3"
+  ],
+  "name": "FRM302 TX",
+  "upload": {
+    "maximum_ram_size": 8192,
+    "maximum_size": 65536,
+    "protocol": "stlink",
+    "protocols": [
+      "jlink",
+      "stlink"
+    ]
+  },
+  "url": "https://www.flysky-cn.com/frm302description",
+  "vendor": "Flysky"
+}
