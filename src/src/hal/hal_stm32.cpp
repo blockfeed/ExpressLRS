@@ -30,7 +30,19 @@ void __attribute__((constructor(102))) __attribute__((used)) init_vectors(void)
      * Vector table is automatically aligned by the linker command file.
      */
     extern uint32_t g_pfnVectors;
-    SCB->VTOR = (__IO uint32_t) &g_pfnVectors;
+
+
+    // Check to see if this chip is one that does not have VTOR reference 
+    #if defined STM32F072xB
+        // This might have to change. 
+        // TODO: Check to see what type of IRQ we need for this type of operation. 
+        IRQn_Type irq = IRQn_Type(0);
+        NVIC_SetVector(irq ,(__IO uint32_t) &g_pfnVectors);
+    #else
+        // else we will use VTOR 
+        SCB->VTOR = (__IO uint32_t) &g_pfnVectors;       
+    #endif
+
 }
 
 extern "C"
