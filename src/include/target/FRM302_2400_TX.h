@@ -6,20 +6,20 @@
 
 // GPIO pin definitions
 #define GPIO_PIN_NSS                PA15
-#define GPIO_PIN_BUSY               PB15
-#define GPIO_PIN_DIO1               PB2
-#define GPIO_PIN_MOSI               PA7
-#define GPIO_PIN_MISO               PA6
-#define GPIO_PIN_SCK                PA5
-#define GPIO_PIN_RST                PB0
-#define GPIO_PIN_TX_ENABLE          PA8  // Works on Lite
-#define GPIO_PIN_RX_ENABLE          PB14 // Works on Lite
-#define GPIO_PIN_ANT_CTRL_1         PA9
-#define GPIO_PIN_ANT_CTRL_2         PB13
-#define GPIO_PIN_RCSIGNAL_RX        PA10 // S.PORT (Only needs one wire )
-#define GPIO_PIN_RCSIGNAL_TX        PB6  // Needed for CRSF libs but does nothing/not hooked up to JR module.
-#define GPIO_PIN_PA_ENABLE          PB11  // https://www.skyworksinc.com/-/media/SkyWorks/Documents/Products/2101-2200/SE2622L_202733C.pdf
-#define GPIO_PIN_RF_AMP_DET         PA3  // Voltage detector pin
+#define GPIO_PIN_BUSY               PB6
+#define GPIO_PIN_DIO1               PB10
+#define GPIO_PIN_MOSI               PB5
+#define GPIO_PIN_MISO               PB4
+#define GPIO_PIN_SCK                PB3
+#define GPIO_PIN_RST                PA0
+#define GPIO_PIN_TX_ENABLE          PA4  // Controlled by FRIO?
+#define GPIO_PIN_RX_ENABLE          PB1  // Controlled by FRIO?
+//#define GPIO_PIN_ANT_CTRL_1         PA9 // not sure if present on FRM302?
+//#define GPIO_PIN_ANT_CTRL_2         PB13 // not sure if present on FRM302?
+#define GPIO_PIN_RCSIGNAL_RX        PA9 // S.PORT (Only needs one wire )
+#define GPIO_PIN_RCSIGNAL_TX        PA10  // Needed for CRSF libs but does nothing/not hooked up to JR module.
+//#define GPIO_PIN_PA_ENABLE          PB11  // The AWB7232 does not appear to have an EN pin like the SE2622L_202733C
+//#define GPIO_PIN_RF_AMP_DET         PA3  // Voltage detector pin, not present on AWB7232?
 // #define GPIO_PIN_BUZZER             PC13
 
 // Output Power
