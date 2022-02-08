@@ -5,22 +5,29 @@
 #define TARGET_TX_FRM302
 
 // GPIO pin definitions
-#define GPIO_PIN_NSS                PA15
-#define GPIO_PIN_BUSY               PB6
-#define GPIO_PIN_DIO1               PB10
-#define GPIO_PIN_MOSI               PB5
-#define GPIO_PIN_MISO               PB4
-#define GPIO_PIN_SCK                PB3
-#define GPIO_PIN_RST                PA0
-#define GPIO_PIN_TX_ENABLE          PA4  // Controlled by FRIO?
-#define GPIO_PIN_RX_ENABLE          PB1  // Controlled by FRIO?
-//#define GPIO_PIN_ANT_CTRL_1         PA9 // not sure if present on FRM302?
-//#define GPIO_PIN_ANT_CTRL_2         PB13 // not sure if present on FRM302?
-#define GPIO_PIN_RCSIGNAL_RX        PA9 // S.PORT (Only needs one wire )
-#define GPIO_PIN_RCSIGNAL_TX        PA10  // Needed for CRSF libs but does nothing/not hooked up to JR module.
-//#define GPIO_PIN_PA_ENABLE          PB11  // The AWB7232 does not appear to have an EN pin like the SE2622L_202733C
+#define GPIO_PIN_RST                PA0  // 10
+#define GPIO_PIN_BUSY               PB6  // 42
+#define GPIO_PIN_DIO1               PB10 // 21 USART3, see also PB11?
+#define GPIO_PIN_NSS                PA15 // 38
+#define GPIO_PIN_MOSI               PB5  // 41
+#define GPIO_PIN_MISO               PB4  // 40
+#define GPIO_PIN_SCK                PB3  // 39
+// SKYA21012 front end control
+//#define GPIO_PIN_TX_ENABLE          PA4  // connects to "something_EN" pad L
+//#define GPIO_PIN_RX_ENABLE          PB1  // connects to "something_EN" pad R
+//#define GPIO_PIN_PA_ENABLE          PA12    // CSD - lifted from namimno
+//#define GPIO_PIN_ANT_CTRL_1         19 // not sure if present on FRM302?
+//#define GPIO_PIN_ANT_CTRL_2         14 // not sure if present on FRM302?
+
+/* S.Port input signal */
+#define GPIO_PIN_RCSIGNAL_RX        PA9   // RCSIGNAL is sport, only needs one wire, USART1
+#define GPIO_PIN_RCSIGNAL_TX        PA10  // Needed for CRSF libs but does nothing/not hooked up to JR module. USART1
+#define GPIO_PIN_DEBUG_RX       PA3 // USART2
+#define GPIO_PIN_DEBUG_TX       PA2 // USART2
+
+//#define GPIO_PIN_FAN_EN             PB0
 //#define GPIO_PIN_RF_AMP_DET         PA3  // Voltage detector pin, not present on AWB7232?
-// #define GPIO_PIN_BUZZER             PC13
+//#define GPIO_PIN_BUZZER             PC13
 
 // Output Power
 #define MinPower                    PWR_10mW
