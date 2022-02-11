@@ -4,7 +4,7 @@
 #include <stm32_def.h>
 #include <string.h>
 #include <stdint.h>
-
+#include "stm32f0xx_ll_system..h"
 
 void __attribute__((used)) copy_functions_to_ram(void)
 {
@@ -34,10 +34,7 @@ void __attribute__((constructor(102))) __attribute__((used)) init_vectors(void)
 
     // Check to see if this chip is one that does not have VTOR reference 
     #if defined STM32F072xB
-        // This might have to change. 
-        // TODO: Check to see what type of IRQ we need for this type of operation. 
-        IRQn_Type irq = IRQn_Type(0);
-        NVIC_SetVector(irq ,(__IO uint32_t) &g_pfnVectors);
+        LL_SYSCFG_SetRemapMemory(LL_SYSCFG_REMAP_SRAM);
     #else
         // else we will use VTOR 
         SCB->VTOR = (__IO uint32_t) &g_pfnVectors;       
