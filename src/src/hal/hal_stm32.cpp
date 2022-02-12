@@ -4,7 +4,7 @@
 #include <stm32_def.h>
 #include <string.h>
 #include <stdint.h>
-#include "stm32f0xx_ll_system..h"
+#include "stm32f0xx_ll_system.h"
 
 void __attribute__((used)) copy_functions_to_ram(void)
 {
