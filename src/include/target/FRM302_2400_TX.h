@@ -21,8 +21,8 @@
 /* S.Port input signal */
 #define GPIO_PIN_RCSIGNAL_RX        PA9   // RCSIGNAL is sport, only needs one wire, USART1
 #define GPIO_PIN_RCSIGNAL_TX        PA10  // Needed for CRSF libs but does nothing/not hooked up to JR module. USART1
-//#define GPIO_PIN_DEBUG_RX       PA3 // USART2 JR PPM
-//#define GPIO_PIN_DEBUG_TX       PA2 // USART2 JR TX
+#define GPIO_PIN_DEBUG_RX       PA3 // USART2 JR PPM
+#define GPIO_PIN_DEBUG_TX       PA2 // USART2 JR TX
 
 //#define GPIO_PIN_FAN_EN             PB0
 
