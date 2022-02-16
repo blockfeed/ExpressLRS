@@ -12,8 +12,8 @@
 #define GPIO_PIN_MOSI               PB5  // 41
 #define GPIO_PIN_MISO               PB4  // 40
 #define GPIO_PIN_SCK                PB3  // 39
-#define GPIO_PIN_TX_ENABLE          PA4  // connects to "something_EN" pad L
-#define GPIO_PIN_RX_ENABLE          PB1  // connects to "something_EN" pad R
+//#define GPIO_PIN_TX_ENABLE          PA4  // connects to "something_EN" pad L
+//#define GPIO_PIN_RX_ENABLE          PB1  // connects to "something_EN" pad R
 //#define GPIO_PIN_PA_ENABLE          PA12    // CSD - lifted from namimno
 //#define GPIO_PIN_ANT_CTRL_1         19 // not sure if present on FRM302?
 //#define GPIO_PIN_ANT_CTRL_2         14 // not sure if present on FRM302?
@@ -21,8 +21,8 @@
 /* S.Port input signal */
 #define GPIO_PIN_RCSIGNAL_RX        PA9   // RCSIGNAL is sport, only needs one wire, USART1
 #define GPIO_PIN_RCSIGNAL_TX        PA10  // Needed for CRSF libs but does nothing/not hooked up to JR module. USART1
-#define GPIO_PIN_DEBUG_RX       PA3 // USART2 JR PPM
-#define GPIO_PIN_DEBUG_TX       PA2 // USART2 JR TX
+//#define GPIO_PIN_DEBUG_RX       PA3 // USART2 JR PPM
+//#define GPIO_PIN_DEBUG_TX       PA2 // USART2 JR TX
 
 //#define GPIO_PIN_FAN_EN             PB0
 
