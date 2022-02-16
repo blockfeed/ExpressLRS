@@ -144,7 +144,7 @@ static int32_t dynamic_power_rssi_n;
 static int32_t dynamic_power_avg_lq;
 static bool dynamic_power_updated;
 
-#ifdef TARGET_TX_GHOST
+#if defined TARGET_TX_GHOST || defined TARGET_TX_FRM302
 extern "C"
 /**
   * @brief This function handles external line 2 interrupt request.
