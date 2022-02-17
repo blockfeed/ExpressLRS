@@ -29,14 +29,13 @@ void __attribute__((constructor(102))) __attribute__((used)) init_vectors(void)
      * stack pointer is the first word and second is the reset vector.
      * Vector table is automatically aligned by the linker command file.
      */
-    extern uint32_t g_pfnVectors;
-
 
     // Check to see if this chip is one that does not have VTOR reference 
     #if defined STM32F072xB
         LL_SYSCFG_SetRemapMemory(LL_SYSCFG_REMAP_SRAM);
     #else
         // else we will use VTOR 
+        extern uint32_t g_pfnVectors;
         SCB->VTOR = (__IO uint32_t) &g_pfnVectors;       
     #endif
 
