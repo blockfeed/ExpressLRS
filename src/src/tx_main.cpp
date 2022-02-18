@@ -934,6 +934,11 @@ static void setupTarget()
   Serial.setRx(PA3);
 #endif
 
+//#if defined(TARGET_TX_FRM302)
+//  Serial.setTx(PA2);
+//  Serial.setRx(PA3);
+//#endif
+
 #if defined(TARGET_TX_FM30)
   pinMode(GPIO_PIN_UART3RX_INVERT, OUTPUT); // RX3 inverter (from radio)
   digitalWrite(GPIO_PIN_UART3RX_INVERT, LOW); // RX3 not inverted

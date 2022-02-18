@@ -19,69 +19,69 @@ extern "C" {
 /*----------------------------------------------------------------------------
  *        STM32 pins number
  *----------------------------------------------------------------------------*/
-#define PA8                     0
-#define PA9                     1
-#define PA10                    2
-#define PA11                    3
-#define PA12                    4
-#define PA13                    5
-#define PA14                    6
-#define PA15                    7
-#define PB2                     8
-#define PB3                     9
-#define PB4                     10
-#define PB5                     11
-#define PB6                     12
-#define PB7                     13
-#define PB8                     14
-#define PB9                     15
-#define PB10                    16
-#define PB11                    17
-#define PB12                    18
-#define PB13                    19
-#define PB14                    20
-#define PB15                    21
-#define PC13                    22
-#define PC14                    23
-#define PC15                    24
-#define PA0                     PIN_A0
-#define PA1                     PIN_A1
-#define PA2                     PIN_A2
-#define PA3                     PIN_A3
-#define PA4                     PIN_A4
-#define PA5                     PIN_A5
-#define PA6                     PIN_A6
-#define PA7                     PIN_A7
-#define PB0                     PIN_A8
-#define PB1                     PIN_A9
-#define PF0                     35
-#define PF1                     36
+#define PA8                     29
+#define PA9                     30
+#define PA10                    31
+#define PA11                    32
+#define PA12                    33
+#define PA13                    34
+#define PA14                    37
+#define PA15                    38
+#define PB2                     20
+#define PB3                     39
+#define PB4                     40
+#define PB5                     41
+#define PB6                     42
+#define PB7                     43
+#define PB8                     45
+#define PB9                     46
+#define PB10                    21
+#define PB11                    22
+#define PB12                    25
+#define PB13                    26
+#define PB14                    27
+#define PB15                    28
+#define PC13                    2
+#define PC14                    3
+#define PC15                    4
+#define PA0                     10
+#define PA1                     11
+#define PA2                     12
+#define PA3                     13
+#define PA4                     14
+#define PA5                     15
+#define PA6                     16
+#define PA7                     17
+#define PB0                     18
+#define PB1                     19
+#define PF0                     5
+#define PF1                     6
 
 #define NUM_DIGITAL_PINS        37
 #define NUM_ANALOG_INPUTS       10
 
 // On-board LED pin number
-#define LED_BUILTIN             PA15
+#define LED_BUILTIN             -1 // PA15
 #define LED_RED                 LED_BUILTIN
-#define LED_GREEN               PB3
+#define LED_GREEN               -1 // PB3
 
 // SPI Definitions
-#define PIN_SPI_SS              PA4
-#define PIN_SPI_MOSI            PA7
-#define PIN_SPI_MISO            PA6
-#define PIN_SPI_SCK             PA5
+#define PIN_SPI_SS              PA15
+#define PIN_SPI_MOSI            PB5
+#define PIN_SPI_MISO            PB4
+#define PIN_SPI_SCK             PB3
 
 // I2C Definitions
-#define PIN_WIRE_SDA            PB7
-#define PIN_WIRE_SCL            PB6
+#define PIN_WIRE_SDA            PB14
+#define PIN_WIRE_SCL            PB13
 
 // Timer Definitions
-#define TIMER_TONE              TIM3
-#define TIMER_SERVO             TIM2
-
+#define TIMER_TONE              TIM3 // no idea?
+#define TIMER_SERVO             TIM2 // no idea?
+fuckduckfffufuckk
 // UART Definitions
 // Define here Serial instance number to map on Serial generic name
-#define SERIAL_UART_INSTANCE    1
+#define SERIAL_UART_INSTANCE    2
 
 // Default pin used for 'Serial' instance
 // Mandatory for Firmata

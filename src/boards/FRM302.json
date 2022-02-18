@@ -1,0 +1,40 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m0",
+    "extra_flags": "-DSTM32F072xB",
+    "f_cpu": "48000000L",
+    "ldscript": "variants/STM32F0xx/ldscript.ld",
+    "mcu": "stm32f072cbt6",
+    "product_line": "STM32F072xB",
+    "variants_dir": "variants",
+    "variant": "FRM302"
+},
+  "debug": {
+    "jlink_device": "STM32F072C8",
+    "openocd_target": "stm32f0x",
+    "svd_path": "STM32F072x.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "libopencm3",
+    "stm32cube"
+  ],
+  "name": "FRM302",
+  "upload": {
+    "maximum_ram_size": 16384,
+    "maximum_size": 131072,
+    "protocol": "serial",
+    "protocols": [
+      "blackmagic",
+      "cmsis-dap",
+      "dfu",
+      "jlink",
+      "serial",
+      "stlink"
+    ]
+  },
+  "url": "https://www.elektormagazine.com/labs/lorawan-node-experimental-platform",
+  "vendor": "Elektor"
+}
