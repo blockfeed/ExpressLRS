@@ -105,7 +105,7 @@ extern "C" {
 //#define TIMER_SERVO             TIM7
 
 // UART Definitions
-#define SERIAL_UART_INSTANCE    1
+//#define SERIAL_UART_INSTANCE    2
 // Default pin used for 'Serial' instance
 // Mandatory for Firmata
 #define PIN_SERIAL_RX           PA3

@@ -35,42 +35,41 @@ extern "C" {
 
 // Pin number
 const PinName digitalPin[] = {
-  PC_13,  //D0  - CAN_TX
-  PC_14,  //D1  - CAN_RX
-  PC_15,  //D2  - UART1_RX or I2C1_SDC
-  PA_0, //D3
-  PA_1,  //D4  - UART1_TX or I2C1_SCL
-  PA_2,  //D5  - LED_RED
-  PA_3,  //D6  - LED_BLUE
+  PC_13,  //D0  - 
+  PC_14,  //D1  -
+  PC_15,  //D2  - 
+  PF_0, //D3
+  PF_1,  //D4  - 
+  PB_2,  //D5  - 
+  PB_4,  //D6  - 
   PA_4,  //D7
   PA_5, //D8
-  PA_6, //D9  - USB_DP
-  PA_0, //D10  - USB_DM
-  PA_1, //D11 - SDA MPU-9150
-  PA_2,  //D12 - SCL MPU-9150
-  PA_3,  //D13
+  PA_6, //D9  - 
+  PA_0, //D10  -
+  PA_1, //D11 - 
+  PA_2,  //D12 - USART2_TX
+  PA_3,  //D13 - USART2_RX
   PB_10, //D14
   PB_11, //D15
   PB_12, //D16
   PB_13, //D17
-  PB_14, //D18 - LED on Bluepill Board
+  PB_14, //D18 - 
   PB_15, //D19
-  PA_8, //D20
+  PA_8, //D20 - pin29, analog range start
   PA_9,  //D21/A0
   PA_10,  //D22/A1
   PA_11,  //D23/A2
-  PA_12,  //D24/A3 - RCX
+  PA_12,  //D24/A3 -
   PA_13,  //D25/A4
   PA_14,  //D26/A5
-  PA_15,  //D27/A6
+  PA_15,  //D27/A6 - pin38, analog range end
   PB_3,  //D28/A7
-  PB_3,  //D29/A8
-  PB_4,  //D30/A9
-  PB_5, //D31 - UART3_TX
-  PB_6, //D32 - UART3_RX
-  PB_7,  //D33 - BOOT1
-  PB_8, //D34 - SWDI0
-  PA_9, //D35 - SWCLK
+  PB_4,  //D29/A8
+  PB_5,  //D30/A9
+  PB_6, //D31 - UART3_TX
+  PB_7, //D32 - UART3_RX
+  PB_8,  //D33 - BOOT1
+  PB_9, //D34 - SWDI0
 };
 
 // If analog pins are not contiguous in the digitalPin array:
@@ -86,8 +85,6 @@ const uint32_t analogInputPin[] = {
   25,
   26,
   27,
-  28,
-  29
 };
 
 #ifdef __cplusplus
